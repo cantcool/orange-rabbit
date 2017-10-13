@@ -73,6 +73,10 @@ a {
   color: inherit;
 }
 
+p {
+  line-height: 23px;
+}
+
 main {
   min-height: calc(100vh - 130px - 85px);
 }
@@ -196,6 +200,8 @@ nav {
 }
 
 
+
+
 /* BANNERS */
 
 .banners {
@@ -207,32 +213,33 @@ nav {
 }
 
 .banner-item {
+  position: relative;
   margin: 0;
   padding: 0;
   background-image: url(../img/big-orange-bg.jpg);
   width: 1600px;
   height: 400px;
   left: -200px;
-  position: absolute;
   z-index: -1;
 }
 
-.banners header {
+.banners h1 {
+  position: absolute;
+  top: 97px;
+  left: 203px;
   width: 420px;
   text-align: center;
-  padding-top: 130px;
-}
-
-.banners h1 {
-  display: inline-block;
-  margin: 0 0 28px;
-  padding: 0;
   font-family: 'Bebas', 'Arial', sans-serif;
   font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.69);
   font-size: 49px;
   color: #fb9c06;
+}
+
+.banners h1 span {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.69);
   padding: 8px 21px 0px 34px;
+  margin: 0 0 28px;
 }
 
 .banners .inverted {
@@ -259,23 +266,28 @@ nav {
 }
 
 .feature-item {
-  position: relative;
+  vertical-align: top;
   display: inline-block;
   width: 300px;
-  font-size: 16px;
-  padding: 0px 5px 30px 22px;
-  line-height: 23px;
+  padding: 0px 5px 6px 23px;
 }
 
-.feature-item::after {
-  position: absolute;
-  right: 15px;
-  bottom: 7px;
-  content: 'read more...';
+.feature-item p {
+  font-size: 16px;
+  margin: 0 0 0px;
+}
+
+.feature-item a {
+  display: block;
   text-align: right;
   font-style: italic;
   color: #ffac00;
   font-size: 17px;
+  margin-right: 12px;
+}
+
+.feature-item a:hover {
+  opacity: 0.6;
 }
 
 
@@ -341,7 +353,6 @@ h2 {
 .team-member p {
   padding: 4px 35px 0px;
   text-align: left;
-  line-height: 23px;
 }
 
 
@@ -349,9 +360,7 @@ h2 {
 
 
 
-
-
-/* message */ 
+/* MESSAGE */ 
 
 .message {
   text-align: center;
@@ -367,8 +376,9 @@ h2 {
   margin-top: 42px;
 }
 
-.message form p {
-  vertical-align: top;
+.message form div {
+  margin: 0 0 16px;
+  padding: 0;
 }
 
 .message label {
@@ -420,7 +430,6 @@ h2 {
 
 
 /* FOOTER */ 
-
 
 footer {
   text-align: center;
